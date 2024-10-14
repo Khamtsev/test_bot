@@ -31,7 +31,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 def get_api_answer(city):
-  """Получение ответа от эндпоинта."""
+    """Получение ответа от эндпоинта."""
     try:
         response = requests.get(
             ENDPOINT,
