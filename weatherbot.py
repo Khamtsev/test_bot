@@ -31,6 +31,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 def get_api_answer(city):
+  """Получение ответа от эндпоинта."""
     try:
         response = requests.get(
             ENDPOINT,
@@ -51,6 +52,7 @@ def get_api_answer(city):
 
 async def send_weather(update: Update,
                        context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Отправка сообщения с погодой."""
     try:
         data = get_api_answer(update.message.text)
         city = data["location"]["name"]
